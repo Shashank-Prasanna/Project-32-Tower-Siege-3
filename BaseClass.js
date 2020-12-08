@@ -16,9 +16,9 @@ class BaseClass {
 	display() {
 		Matter.Body.setAngle(this.body, 0);
 		push();
-		fill(this.r, this.g, this.b);
 		translate(this.body.position.x, this.body.position.y);
 		rectMode(CENTER);
+		fill(this.r, this.g, this.b);
 		rect(0, 0, this.width, this.height);
 		pop();
 	}
