@@ -1,0 +1,24 @@
+C-32:
+
+    ✔ Score: @done(20-12-09 18:15)
+
+         ✔ Box.js: @done(20-12-09 17:44)
+            ✘ Create score function                    @started(20-12-09 17:24) @cancelled(20-12-09 17:34) @wasted(10m43s)
+            ✘ Set a limit for visibility @cancelled(20-12-09 17:34)
+            ✘ Score increases as tint decreases @cancelled(20-12-09 17:34)
+
+        ✔ Sketch.js: @done(20-12-09 17:47)
+            ✘ Call score function @cancelled(20-12-09 17:34)
+            ✔ Display score @done(20-12-09 17:47)
+
+    ✔ Background: @done(20-12-09 18:15)
+
+        ✔ Sketch.js: @done(20-12-09 18:15)
+            ✔ Make a updateBackground() function @done(20-12-09 18:03)
+            ✔ Get time from WorldTime API using fetch() @done(20-12-09 18:03)
+            ✔ 6am to 6pm: Make bg yellow @done(20-12-09 18:15)
+            ✔ 6pm to 6am: Make bg black @done(20-12-09 18:15)
+    Github:
+        ☐ Upload to Github
+        ☐ Share link on Whitehat JR
+

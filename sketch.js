@@ -25,6 +25,8 @@ var gameState = 'start';
 
 var projectile;
 var slingshot;
+var score = 0;
+var bgColor = 'gray';
 
 function preload() {}
 
@@ -84,7 +86,7 @@ function setup() {
 }
 
 function draw() {
-	background(100);
+	background(bgColor);
 	Engine.update(engine);
 
 	platformLow.display();
@@ -125,6 +127,12 @@ function draw() {
 	projectile.display();
 
 	slingshot.display();
+
+	updateBackground();
+
+	fill(255);
+	textSize(30);
+	text('Score: ' + score, 1600, 50);
 }
 
 function mouseDragged() {
@@ -139,5 +147,17 @@ function keyPressed() {
 	if (keyCode === 32) {
 		slingshot.attach(projectile.body);
 		console.log('Hi!');
+	}
+}
+
+async function updateBackground() {
+	var response = await fetch('http://worldtimeapi.org/api/ip');
+	var responseJSON = await response.json();
+	var datetime = responseJSON.datetime;
+	var hour = datetime.slice(11, 13);
+	console.log(hour);
+
+	if (hour >= 6 && hour < 18) {
+		bgColor = 'cyan';
 	}
 }
